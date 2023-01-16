@@ -58,12 +58,12 @@ new_sentence = old_sentence.sub("the jungle", "utopia")
 ## randint & repeating commands
 ## Prints out a random integer between 0 and 9, 10 times.
 
-# 10.times{puts rand(10)}
+# 10.times{ puts rand(10) }
 
 ## Methods (Functions)
 
 def multiply(num1, num2)
-    num1 * num2
+  num1 * num2
 end
 
 # puts multiply(3, 5)
@@ -123,30 +123,30 @@ p str_to_arr
 
 ## Preferred method (single line)
 
-array1.each {|i| print i.to_s + " "}
+array1.each { |i| print i.to_s + " " }
 puts
 
 ## Printing elements in an array that satisfy a boolean statement
 
-p array1.select {|i| i.even?}
+p array1.select { |i| i.even? }
 
 ## Hash aka Dictionary
 
-hash1 = {'a' => 1, 'b' => 2, 'c' => 3}
+hash1 = { 'a' => 1, 'b' => 2, 'c' => 3 }
 p hash1['b']
 
 ## Symbols in hashes
 
-hash2 = {a: 1, b: 2, c: 3, d: "4", e: 5, f: "6"}
+hash2 = { a: 1, b: 2, c: 3, d: "4", e: 5, f: "6" }
 p hash2
 p hash2[:b]
 
 ## Iterating through hashes
 
-hash1.each {|key, value| p "The key is #{key} (#{key.class}) and the value is #{value} (#{value.class})"}
+hash1.each { |key, value| p "The key is #{key} (#{key.class}) and the value is #{value} (#{value.class})" }
 
 ## Removing keys-value pairs based on class of value
 
 p hash2
-hash2.each {|k, v| hash2.delete(k) if v.is_a?(String)}
+hash2.each { |k, v| hash2.delete(k) if v.is_a?(String) }
 p hash2
