@@ -1,0 +1,3 @@
+[submodule "rails_test_app"]
+	path = rails_test_app
+	url = https://github.com/4rtific3/rails_test_app

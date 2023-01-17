@@ -1,0 +1,1 @@
+Test RoR file to try CLI commands & understand the structure of a RoR application
