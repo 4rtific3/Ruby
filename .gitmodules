@@ -1,6 +1,6 @@
 [submodule "rails_test_app"]
 	path = rails_test_app
 	url = https://github.com/4rtific3/rails_test_app
-[submodule "rails_blog_app"]
-	path = rails_blog_app
+[submodule "Udemy/Rails/rails_blog_app"]
+	path = Udemy/Rails/rails_blog_app
 	url = https://github.com/4rtific3/rails_blog_app
