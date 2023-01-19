@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class ArticlesTest < ApplicationSystemTestCase
   setup do
-    @article = articles(:one)
+    set_article = articles(:one)
   end
 
   test "visiting the index" do
@@ -14,8 +14,8 @@ class ArticlesTest < ApplicationSystemTestCase
     visit articles_url
     click_on "New article"
 
-    fill_in "Description", with: @article.description
-    fill_in "Title", with: @article.title
+    fill_in "Description", with: set_article.description
+    fill_in "Title", with: set_article.title
     click_on "Create Article"
 
     assert_text "Article was successfully created"
@@ -23,11 +23,11 @@ class ArticlesTest < ApplicationSystemTestCase
   end
 
   test "should update Article" do
-    visit article_url(@article)
+    visit article_url(set_article)
     click_on "Edit this article", match: :first
 
-    fill_in "Description", with: @article.description
-    fill_in "Title", with: @article.title
+    fill_in "Description", with: set_article.description
+    fill_in "Title", with: set_article.title
     click_on "Update Article"
 
     assert_text "Article was successfully updated"
@@ -35,7 +35,7 @@ class ArticlesTest < ApplicationSystemTestCase
   end
 
   test "should destroy Article" do
-    visit article_url(@article)
+    visit article_url(set_article)
     click_on "Destroy this article", match: :first
 
     assert_text "Article was successfully destroyed"

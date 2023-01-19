@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = Article.new
+    set_article = Article.new
   end
 
   # GET /articles/1/edit
@@ -21,15 +21,15 @@ class ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
-    @article = Article.new(article_params)
+    set_article = Article.new(article_params)
 
     respond_to do |format|
-      if @article.save
-        format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
-        format.json { render :show, status: :created, location: @article }
+      if set_article.save
+        format.html { redirect_to article_url(set_article), notice: "Article was successfully created." }
+        format.json { render :show, status: :created, location: set_article }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
+        format.json { render json: set_article.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -37,19 +37,19 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
     respond_to do |format|
-      if @article.update(article_params)
-        format.html { redirect_to article_url(@article), notice: "Article was successfully updated." }
-        format.json { render :show, status: :ok, location: @article }
+      if set_article.update(article_params)
+        format.html { redirect_to article_url(set_article), notice: "Article was successfully updated." }
+        format.json { render :show, status: :ok, location: set_article }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
+        format.json { render json: set_article.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /articles/1 or /articles/1.json
   def destroy
-    @article.destroy
+    set_article.destroy
 
     respond_to do |format|
       format.html { redirect_to articles_url, notice: "Article was successfully destroyed." }
@@ -60,7 +60,7 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.find(params[:id])
+      set_article = Article.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
