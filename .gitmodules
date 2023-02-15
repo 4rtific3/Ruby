@@ -7,3 +7,9 @@
 [submodule "Udemy/Rails/rails_messaging_app"]
 	path = Udemy/Rails/rails_messaging_app
 	url = https://github.com/4rtific3/rails_messaging_app
+[submodule "finance_tracker"]
+	path = finance_tracker
+	url = https://github.com/4rtific3/finance_tracker
+[submodule "Udemy/Rails/finance_tracker"]
+	path = Udemy/Rails/finance_tracker
+	url = https://github.com/4rtific3/finance_tracker
